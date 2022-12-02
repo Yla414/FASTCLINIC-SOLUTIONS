@@ -1,0 +1,293 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOORCTA</title>
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="/src/assets/css/all.min.css">
+    <link rel="stylesheet" href="/src/assets/css/font-awesome.min.css">
+
+    <!-- Swiper  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/src/assets/css/style.css">
+    
+</head>
+<body>
+    <!-- Mobile navbar -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-container">
+            <div class="nav-container">
+                <ul>
+                    <li onclick="hideMenu()">
+                        <a href="#" class="active">Home</a>
+                    </li>
+                    <li onclick="hideMenu()">
+                        <a href="#showcase">Our Products</a>
+                    </li>
+                    <li onclick="hideMenu()">
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <div class="mobile-social-nav-container display-flex align-items-center justify-content-center">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="credit-container" style="text-align: center;">
+                    <p class="credit-text">Copyright © 2022 Doorcta.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <!-- site header -->
+        <header class="site-header">
+            <div class="header-container container-md display-flex align-items-center justify-content-between">
+                <!-- logo-container -->
+                <div class="logo-container">
+                    <a href="#index.html" class="logo">
+                        <img src="/src/assets/images/logo.png" alt="">
+                    </a>
+                </div>
+                
+                <!-- menu -->
+                <div class="menu-container">
+                    <ul class="display-flex align-items-center">
+                        <li class="position-relative">
+                            <a href="#" class="active">Home</a>
+                        </li>
+                        <li class="position-relative" data-dropdown>
+                            <a href="#" class="display-flex">
+                                Our Products
+                                <i 
+                                    class="fas fa-chevron-down" 
+                                    data-dropdown-btn
+                                    onclick="handleDropdownMenu();"
+                                    id="product-icon">
+                                </i>
+                                <div class="dropdown-menu" id="product-dropdown" data-dropdown-menu>
+                                    <ul>
+                                        <li onclick="hideDropdown()">
+                                            <a href="#showcase" >Doorcta</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="position-relative" data-dropdown>
+                            <a href="#contact" class="display-flex">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="menu-btn" id="menu-btn" onclick="handleHamburger()">
+                    <span class="bar" id="bar-1"></span>
+                    <span class="bar" id="bar-2"></span>
+                    <span class="bar" id="bar-3"></span>
+                </div>
+            </div>
+        </header>
+    
+        <!-- Home container -->
+        <div class="home-container container-lg display-flex justify-content-center"  onclick="hideDropdown(),  hideMenu();" >
+            <div class="home-content">
+                <h1>
+                    <span class="secondary-variant">Quality Healthcare for </span>
+                    <span class="primary-color">EVERYONE</span>
+                </h1>
+                <p class="black-color">
+                    Advancing healthcare delivery through technological innovation.
+                </p>
+            </div>
+        </div>
+
+    <!-- app showcase -->
+    <div class="app-showcase" >
+        <div class="showcase-header">
+            <h2 class="primary-color"id="showcase">Our Products</h2>
+        </div>
+        <div class="showcase container-lg display-flex align-items-center  flex-direction-column">
+            <div class="showcase-row position-relative display-flex align-items-center justify-content-center">
+                <!-- showcase images -->
+                <div class="showcase-img-container">
+                    <div class="iphone-mockup">
+                    </div>
+                    <div class="iphone-mockup"></div>
+                </div>
+    
+                <!-- showcase content -->
+                <div class="showcase-content display-flex  flex-direction-column justify-content-center">
+                    <h1 class="secondary-color">
+                        Download the Doorcta app for instant consultations.
+                    </h1>
+                    <p class="secondary-color">
+                        Join over other users who are using the Doorcta app for instant consultations with
+                        qualified doctors from the comfort of their homes.
+                    </p>
+                    <!-- <div class="showcase-cta-buttons"> -->
+                        <a href="https://www.doorcta.com">
+                            <button class="cta">Get the App</button>
+                        </a>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   <!-- Newsletter -->
+   <section class="contact display-flex align-items-center justify-content-center" id="contact">
+        <div class="contact-container display-flex align-items-center justify-content-center flex-direction-column">
+            <div class="contact-header">
+                <h3 class="primary-color">Contact Us</h3>
+                <h1 class="black-color">Send us a message!</h1>
+            </div>
+            <form action="#">
+                <div class="form-boxes">
+                    <div class="input-box">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="input-box">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone number">
+                    </div>
+                    <div class="input-box">
+                        <i class="fas fa-pen"></i>
+                        <textarea name="message" id="message-box" rows="10"  placeholder="Type your message here..."></textarea>
+                    </div>
+                </div>
+                <button type="submit" id="contact-submit">
+                    Send
+                </button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- footer -->
+    <footer class="display-flex flex-direction-column align-items-center justify-content-center" id="contact">
+        <div class="footer-container display-flex align-items-justify-content-center">
+            <div class="footer-row container-lg">
+                <div class="footer-box">
+                    <div class="head">
+                        <h1 class="white-color">Fastclinic</h1>
+                    </div>
+                    <div class="company-info">
+                        <div>
+                            <p class="address">
+                                Abuja 901101, NG
+                            </p>
+                            <p class="mail">help@fastclinicsolutions.com</p>
+                        </div>
+                        <p class="num"> +234 (0) 816 872-9113 <br> +234 (0) 915 120-7414</p>
+                    </div>
+                </div>
+
+                <div class="footer-box">
+                    <div class="head">
+                        <h3 class="white-color">Quick Links</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#showcase">Our Products</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-box">
+                    <div class="head">
+                        <h3 class="white-color">Services</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">Support Center</a>
+                        </li>
+                        <li>
+                            <a href="#">Quick Chat</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div class="footer-box">
+                    <div class="head">
+                        <h3>Subscribe to our newsletter.</h3>
+                    </div>
+                    <form action="#" method="get">
+                        <input type="email" name="email" id="input-box" class="input-box" placeholder="Enter your email">
+                        <button type="submit" class="submit-btn" id="submit">
+                            <img width="20" src="/src/assets/images/envelope_64.png" alt="">
+                        </button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fa fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <hr class="divider">
+
+        <div class="credit display-flex align-items-center flex-direction-column justify-content-center">
+            <p>Copyright © 2022 Doorcta. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- back to home -->
+    <div class="top-nav-button">
+        <a href="#">
+            <i class="fas fa-arrow-up"></i>
+            <p>Back to top</p>
+        </a>
+    </div>
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS File -->
+    <script src="/src/assets/js/app.js"></script>
+</body>
+</html>
